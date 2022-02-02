@@ -1,6 +1,7 @@
 package com.mercadolivro.controller
 
 import com.mercadolivro.controller.request.PostCustomerRequest
+import com.mercadolivro.controller.request.PutCustomerRequest
 import com.mercadolivro.model.CustomerModel
 import org.springframework.http.HttpStatus
 import org.springframework.web.bind.annotation.*
@@ -31,5 +32,14 @@ class CustomerController {
     @GetMapping("/{id}")
     fun getCustomer(@PathVariable id: String): CustomerModel {
         return this.customers.first { it.id == id }
+    }
+
+    @PutMapping("/{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    fun update(@PathVariable id: String, @RequestBody customer: PutCustomerRequest) {
+        this.customers.first { it.id == id }.let {
+            it.name = customer.name
+            it.email = customer.email
+        }
     }
 }
