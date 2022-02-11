@@ -20,14 +20,14 @@ class CustomerService {
             1
         } else {
             this.customers.last().id!!.toInt().plus(1)
-        }.toString()
+        }
 
         customer.id = id
 
         this.customers.add(customer)
     }
 
-    fun getCustomer(id: String): CustomerModel {
+    fun getCustomer(id: Int): CustomerModel {
         return this.customers.first { it.id == id }
     }
 
@@ -38,7 +38,7 @@ class CustomerService {
         }
     }
 
-    fun delete(id: String) {
+    fun delete(id: Int) {
         this.customers.removeIf { it.id == id }
     }
 }
