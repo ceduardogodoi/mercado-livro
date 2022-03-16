@@ -9,14 +9,14 @@ spring:
     url: jdbc:mysql://localhost:3306/mercadolivro?createDatabaseIfNotExist=true
     username: root
     password: root
-  show-sql: true
+#  show-sql: true
 
-logging:
-  level:
-    org:
-      hibernate:
-        SQL:
-          DEBUG
+#logging:
+#  level:
+#    org:
+#      hibernate:
+#        SQL:
+#          DEBUG
 
-# spring.datasource.driver-class-name: com.mysql.jdbc.Driver
-# spring.jpa.show-sql: true
+#spring.datasource.driver-class-name: com.mysql.jdbc.Driver
+#spring.jpa.show-sql: true
