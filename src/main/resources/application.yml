@@ -9,6 +9,8 @@ spring:
     url: jdbc:mysql://localhost:3306/mercadolivro?createDatabaseIfNotExist=true
     username: root
     password: root
+  jackson:
+    default-property-inclusion: non_null
 #  show-sql: true
 
 #logging:
