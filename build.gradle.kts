@@ -18,7 +18,8 @@ repositories {
 }
 
 dependencies {
-    implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+	implementation("org.springframework.boot:spring-boot-starter-validation")
+	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
     implementation("org.springframework.boot:spring-boot-starter-web")
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
@@ -26,7 +27,7 @@ dependencies {
 	implementation("org.flywaydb:flyway-core:8.5.1")
 	implementation("org.flywaydb:flyway-mysql:8.5.1")
 
-    runtimeOnly("mysql:mysql-connector-java")
+	runtimeOnly("mysql:mysql-connector-java")
 
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
